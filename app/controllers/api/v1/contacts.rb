@@ -1,7 +1,7 @@
 module API
-	module v1
+	module V1
 		class Contacts < Grape::API
-			include API::v1::Defaults
+			include API::V1::Defaults
 
 			resource :contacts do
 				desc "Return all contacts"
