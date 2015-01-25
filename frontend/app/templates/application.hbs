@@ -1,7 +1,11 @@
 <h2 id="title">Ember-Example</h2>
-	<ul>
-		<li>{{link-to 'Home' 'index'}}</li>
-		<li>{{link-to 'Contacts' 'contacts'}}</li>
-	</ul>
 
+{{#link-to 'index'}}Home{{/link-to}}
+{{link-to 'Contacts' 'contacts'}}
+{{#if session.isAuthenticated}}
+	<button {{ action 'invalidateSession' }}>Logout</button>
+{{else}}
+	{{#link-to 'login'}}Login{{/link-to}}
+{{/if}}
+<hr>
 {{outlet}}
