@@ -8,7 +8,9 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.resource('contacts', function() {
       this.resource('contact', { path: '/:contact_id' });
-	});
+    });
+  this.route("login");
+  this.route("protected");
 });
 
 export default Router;
